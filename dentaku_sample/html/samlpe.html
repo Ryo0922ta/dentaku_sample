@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="../css/sample.css">
+    </head>
+    <body>
+        <p>電卓を作成します</p>
+        <!-- https://catnose.me/learning/html/td -->
+        <!-- thが見出し -->
+        <!-- tdは見出し以外のでーた -->
+        <!-- colspn　で行の幅を変化 -->
+        <!-- rowspan　で列の幅を変化 -->
+        <!-- trが各行をしめす -->
+        <!-- inputのvalue =""disabledで直接の入力をさせない  -->
+        <!-- disabledの操作はjsで行うのが基本 -->
+        <div> 
+            <!-- 入力の値やパーツはformに集まっているのでinputタグを使うときはformタグを先に記述しないと入力値を出力できない-->
+            <!-- https://catnose.me/learning/html/form -->
+            <form name="dentaku">
+                <table>
+                    <tr>
+                        <td colspan="4">
+                            <input type= "text" class="display" name="display" value="" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="7" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="8" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="9" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="÷" class="operator" name="div_btn" onclick="get_calc(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="6" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="5" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="4" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="×" class="operator" name="multi_btn" onclick="get_calc(this)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="3" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="2" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="1" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="+" class="operator"  onclick="get_calc(this)"></td>
+                    </tr>
+                    <tr>
+                     <td><input type="button" value="C" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="0" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="=" onclick="get_calc(this)"></td>
+                        <td><input type="button" value="-" class="operator" onclick="get_calc(this)"></td>
+                    </tr>
+                </table> 
+            </form>
+        </div>
+            
+        <script src ="../js/sample.js"></script>
+    </body>
+</html>
